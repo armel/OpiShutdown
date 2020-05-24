@@ -10,8 +10,7 @@ import os
 if not os.getegid() == 0:
     sys.exit('Script must be run as root')
 
-#CMD = '/sbin/shutdown -h now'
-CMD = 'echo Hello'
+CMD = '/sbin/shutdown -h now'
 POWER_BUTTON = port.PA14
 LED = port.STATUS_LED
 
@@ -28,16 +27,16 @@ def main(argv):
         # Returns a 1 if open and a 0 if pressed/closed
         current_button_state = gpio.input(POWER_BUTTON)
 
-        print(initial_button_state, current_button_state)
-        sys.stdout.flush()
+        #print(initial_button_state, current_button_state)
+        #sys.stdout.flush()
 
         # Check if button state has changed 
         if current_button_state != initial_button_state:
-            print('Button pressed')
+            #print('Button pressed')
             gpio.output(LED, 1)
             subprocess.call(CMD, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        time.sleep(0.5)
+        time.sleep(0.1)
 
 if __name__ == '__main__':
     try:

@@ -17,7 +17,7 @@ LED = port.STATUS_LED
 
 def main(argv):
 
-    initial_button_state = True
+    initial_button_state = 0
 
     gpio.init()
     gpio.setcfg(POWER_BUTTON, gpio.INPUT)
@@ -32,15 +32,10 @@ def main(argv):
         sys.stdout.flush()
 
         # Check if button state has changed 
-        if current_button_state != initial_button_state and not current_button_state:
+        if current_button_state != initial_button_state:
             gpio.output(LED, 1)
             subprocess.call(CMD, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             initial_button_state = current_button_state
-
-            # This resets the button state flag and turns off LED so the button can be pressed again if testing
-            time.sleep(0.5)
-            gpio.output(LED, 0)
-            initial_button_state = True
 
     time.sleep(0.1)
 

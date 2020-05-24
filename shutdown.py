@@ -33,6 +33,7 @@ def main(argv):
 
         # Check if button state has changed 
         if current_button_state != initial_button_state:
+            print('Button pressed')
             gpio.output(LED, 1)
             subprocess.call(CMD, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 

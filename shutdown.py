@@ -14,14 +14,15 @@ CMD = '/sbin/shutdown -h now'
 POWER_BUTTON = port.PA14
 LED = port.STATUS_LED
 
-initial_button_state = True
-
-gpio.init()
-gpio.setcfg(POWER_BUTTON, gpio.INPUT)
-gpio.pullup(POWER_BUTTON, gpio.PULLUP)
-gpio.setcfg(LED, gpio.OUTPUT)
-
 def main(argv):
+
+    initial_button_state = True
+
+    gpio.init()
+    gpio.setcfg(POWER_BUTTON, gpio.INPUT)
+    gpio.pullup(POWER_BUTTON, gpio.PULLUP)
+    gpio.setcfg(LED, gpio.OUTPUT)
+
     while True:
         # Returns a 1 if open and a 0 if pressed/closed
         current_button_state = gpio.input(POWER_BUTTON)

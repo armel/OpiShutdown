@@ -30,6 +30,6 @@ Afin d'automatiser le lancement du script au démarrage, éditer le fichier `/et
 
 `nohup /usr/bin/python3 /OpiShutdown/shutdown.py &`
 
-
+> Attention à bien insérer cette ligne avant la toute dernière ligne qui contient `exit O`
 
 

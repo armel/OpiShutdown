@@ -35,7 +35,6 @@ def main(argv):
         if current_button_state != initial_button_state:
             gpio.output(LED, 1)
             subprocess.call(CMD, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            initial_button_state = current_button_state
 
         time.sleep(0.5)
 

@@ -37,7 +37,7 @@ def main(argv):
             subprocess.call(CMD, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             initial_button_state = current_button_state
 
-    time.sleep(0.5)
+        time.sleep(0.5)
 
 if __name__ == '__main__':
     try:

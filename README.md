@@ -28,7 +28,7 @@ git clone https://github.com/armel/OpiShutdown.git
 
 Afin d'automatiser le lancement du script au démarrage, éditer le fichier `/etc/rc.local` et ajouter la ligne :
 
-`nohup /usr/bin/python3 /OpiShutdown/shutdown.py &`
+`nohup /usr/bin/python3 /opt/OpiShutdown/shutdown.py &`
 
 > Attention à bien insérer cette ligne avant la toute dernière ligne qui contient `exit O`
 

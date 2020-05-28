@@ -33,3 +33,6 @@ Afin d'automatiser le lancement du script au démarrage, éditer le fichier `/et
 > Attention à bien insérer cette ligne avant la toute dernière ligne qui contient `exit O`
 
 
+## Cablage
+
+Vous avez besoin d'un simple bouton poussoir et de 2 résistances : 10Kohm et 1Kohm.

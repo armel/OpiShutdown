@@ -35,6 +35,6 @@ Afin d'automatiser le lancement du script au démarrage, éditer le fichier `/et
 
 ## Cablage
 
-Vous avez besoin d'un simple bouton poussoir et de 2 résistances : 10Kohm (relié à la masse) et 1Kohm.
+Vous avez besoin d'un simple bouton poussoir et de 2 résistances : 10Kohm (reliée à la masse) et 1Kohm.
 
 ![alt text](https://github.com/armel/OpiShutdown/blob/master/doc/OpiShutdown.png)
